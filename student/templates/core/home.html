@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+  {% include "data.html" %}
+    <link rel="stylesheet" href="{% static 'core/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+
+</head>
+
+<body>
+
+    {% include "header.html" %}
+    <div class="home">
+        <div class="home_box">
+            {% if not request.user.is_authenticated  %}
+            <div class="home_box_button">
+                <a href="{% url 'signin' %}">
+                <div class="home_box_line">
+
+                        <input type="button" value="Sign In">
+                    </div>
+                </a>
+                <a href="{% url 'signup' %}">
+
+                    <div class="home_box_line">
+                        <input type="button" value="Sign Up">
+                    </div>
+                </a>
+            </div>
+            {% else %}
+            <div class="home_box_button">
+                <a href="{% url 'exam' %}">
+                <div class="home_box_line">
+
+                        <input type="button" value="Exam">
+                    </div>
+                </a>
+                <a href="{% url 'score' %}">
+
+                    <div class="home_box_line">
+                        <input type="button" value="score">
+                    </div>
+                </a>
+            </div>
+
+            {% endif %}
+        </div>
+    </div>
+    
+    {% include "footer.html" %}
+</body>
+
+</html>

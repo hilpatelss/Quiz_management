@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chapter {
+
+    height:  calc(max-content + ((var(--navbar_h))*4));
+
+}
+
+.chapter_logo {
+    
+    font-size: var(--navbar_h);
+    border-bottom: 3px solid black;
+    height: calc((var(--navbar_h)) + 30px);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.chapter_select {
+
+    height: calc((var(--page_height)) + (var(--navbar_h)) - 30px );
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.chapter_box{
+    box-shadow:  var(--box_shadow);
+    background-color: var(--bg_color);
+    height: max-content;
+    width: 70%;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 25px;
+    background-color: var(--bg_color);
+}
+.chapter_line{
+    border: 2px solid black;
+    height: var(--navbar_h);
+    display: flex;
+}
+.Chapter_line_no{
+    
+    width: var(--item_logo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Chapter_line_name{
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    width: calc(100% - ((var(--item_logo))*3.5));
+    display: flex;
+    align-items: center;
+
+    justify-content: start;
+    padding: 0 calc((var(--item_logo))*0.2) ;
+    
+}
+#first{
+    justify-content: center;
+    padding: 0 calc((var(--item_logo))*0.2) ;
+
+}
+.Chapter_line_exam{
+    
+    width: calc((var(--item_logo))*2.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    padding: 5px 20px;
+    width: 80%;
+    height: 60%;
+    border: var(--box_border);
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 50px;
+    background-color: white;
+}
+
+ .button:active,
+.button:hover,
+.button:focus
+{
+    background-color: white;
+    border: var(--box_border_hover);
+  
+}
+
+
+@media screen and (max-width: 800px) and (orientation : landscape) {  
+    .chapter_box{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 800px) and (orientation : portrait) {  
+    .message{
+        height: var(--page_height);
+        width: 100%;
+        background: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .message_box{
+        height:10vh ;
+        width: 50%;
+        
+
+    }
+    .message_animation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .message_line{
+        color: black;
+        font-size: 1em;
+        margin-top: 40px;
+        text-align: center;
+       
+    }
+    .phone {
+        height: 50px;
+        width: 100px;
+        border: 3px solid black;
+        border-radius: 10px;
+        animation: rotate 2.5s ease-in-out infinite alternate;
+    }
+    
+      
+    @keyframes rotate {
+        0% {
+              transform: rotate(0deg)
+          }
+          50% {
+              transform: rotate(-90deg)
+          }
+          100% {
+              transform: rotate(-90deg)
+          }
+      }
+    
+    }

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0;
+    font-family: DM Serif Text, serif;
+    box-sizing: border-box;
+    color: black;
+}
+
+.otp_main {
+    border: 1px solid black;
+    height: var(--page_height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.otp_box {
+
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: var(--box_shadow);
+    background-color: var(--bg_color);
+}
+
+.otp_box_L {
+    background: var(--logo);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75%;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp_box_R {
+    border-left: 2.5px solid black;
+    height: 100%;
+    width: 50%;
+}
+
+.otp_box_R_logo {
+    border-bottom: 2.5px solid black;
+    height: 22%;
+    width: 100%;
+    font-weight: 500;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.otp_box_R_form {
+
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.otp_box_R_form_box {
+
+    height: 50%;
+    width: 65%;
+    display: block;
+
+}
+
+.otp_box_R_form_box_line {
+    height: 65px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp_box_R_form_box_line input[type=text],
+input[type=password] {
+    width: 95%;
+    border: 1px solid transparent;
+    border-bottom: var(--box_border);
+    padding: 2px;
+    font-size: medium;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    letter-spacing: 12px;
+}
+
+.otp_box_R_form_box_line input[type=text]::placeholder,
+input[type=password]::placeholder {
+    color: black;
+    letter-spacing: 0px;
+
+}
+
+.otp_box_R_form_box_line input[type=text]::after,
+input[type=text]:active,
+input[type=text]:hover,
+input[type=text]:focus {
+    border: 1px solid transparent;
+    border-bottom: var(--box_border_hover);
+    outline: none;
+    font-weight: var(--font_weight_hover) ;
+}
+
+.otp_box_R_form_box_line input[type=checkbox] {
+    margin: 0 5px 0 0;
+}
+
+.otp_box_R_form_box_line input[type=submit] {
+    padding: 5px 20px;
+    width: 60%;
+    border: 3.5px solid rgba(0, 0, 0, 0.568);
+    font-size: larger;
+    border: var(--box_border);
+    border-radius: 50px;
+    background-color: white;
+}
+
+.otp_box_R_form_box_line input[type=submit]:active,
+input[type=submit]:hover,
+input[type=submit]:focus {
+    background-color: white;
+    border: var(--box_border_hover);
+
+    font-weight: var(--font_weight_hover) ;
+}
+
+.otp_box_R_form_box_line a {
+    text-decoration: none;
+}
+@media screen and (max-width: 1200px) { 
+    .otp_box {
+        height: 400px;
+        width: 800px;       
+    }
+ }
+@media screen and (max-width: 1000px) { 
+    .otp_box {
+        height: 400px;
+        width: 800px;       
+    }
+ }
+@media screen and (max-width: 800px) { 
+    .otp_box {
+        height: 400px;
+        width: 300px;   
+        display: block;
+        overflow: hidden;
+    }
+    .otp_box_R_logo{
+        font-size: calc((var(--navbar_h))*0.5) ;
+        padding: 2vh 0;
+    }
+    .otp_box_L {
+        height: calc((var(--navbar_h))*2);
+        width: 100%;
+        border-bottom: 2px solid black;
+        background-size: 30%;
+    }
+
+    .otp_box_R {
+        height: auto;
+        width: 100%;
+        border: 0px;
+    }
+
+    .otp_box_R_logo {
+        font-size: calc((var(--navbar_h))*0.5);
+        padding: 2vh 0;
+    }
+
+    .otp_box_R_form {
+        height: calc(55vh - ((var(--navbar_h))*5.6));
+    }
+}

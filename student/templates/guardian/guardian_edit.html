@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include "data.html" %}
+  <link rel="stylesheet" href="{% static 'guardian/guardian_edit.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+</head>
+
+<body>
+ 
+  {% include "header.html" %}
+    <div class="guardian_edit_main">
+      <div class="guardian_edit_box">
+        <div class="guardian_edit_box_L">
+          <div class="guardian_edit_box_L_logo"></div>
+        </div>
+        <div class="guardian_edit_box_R">
+          <div class="guardian_edit_box_R_logo">guardian</div>
+          <div class="guardian_edit_box_R_form">
+            <div class="guardian_edit_box_R_form_box">
+              <form name="guardian" action="" method="post">
+                {% csrf_token %}
+                <div class="guardian_edit_box_R_form_box_line">
+                  Institue 1:
+                  <input
+                    type="text"
+                    name="g_1"
+                    
+                    value="{{gardian.g_1}} "
+                 
+                  />
+                </div>
+                <div class="guardian_edit_box_R_form_box_line">
+                  Institue 2:
+                  <input
+                  type="text"
+                  name="g_2"
+                  value="{{gardian.g_2}} "
+                  id=""
+                  />
+                </div>
+                <div class="guardian_edit_box_R_form_box_line">
+                  Institue 3:
+                  <input
+                  type="text"
+                  name="g_3"
+                 
+                  value="{{gardian.g_3}} "
+                  id=""
+                  />
+                </div>
+                <div class="guardian_edit_box_R_form_box_line">
+                  Parents 1:
+                  <input
+                    type="text"
+                    name="g_4"
+                   
+                    value="{{gardian.g_4}} "
+                    id=""
+                  />
+                </div>                
+                <div class="guardian_edit_box_R_form_box_line">
+                  Parents 2:
+                  <input
+                    type="text"
+                    name="g_5"
+                    value="{{gardian.g_5}} "
+                    id=""
+                  />
+                </div>
+                <br>             
+                <div class="guardian_edit_box_R_form_box_line">
+                  <input type="submit" value="Submit" />
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include "footer.html" %}
+  </body>
+</html>

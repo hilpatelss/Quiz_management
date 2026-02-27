@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% include 'data.html' %}
+    <link rel="stylesheet" href="{% static 'user/profile.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+  </head>
+
+  <body>
+    {% include 'header.html' %}
+
+    <div class="profile_main">
+      <div class="profile_box">
+        <div class="profile_box_T">
+          <div class="profile_box_T_logo"></div>
+        </div>
+        <div class="profile_box_B">
+          <div class="profile_box_B_Box">
+            <form action="" method="post">
+              <div class="profile_box_B_Box_line">Name : {{ request.user.first_name }} {{ request.user.last_name }}</div>
+              <div class="profile_box_B_Box_line">Email : {{ request.user.email }}</div>
+              <div class="profile_box_B_Box_line">Username : {{ request.user.username }}</div>
+              <div class="profile_box_B_Box_line">Score : {{ score.right_answer }}\{{ score.total_qustion }}</div>
+              <div class="profile_box_B_Box_line">Percentage : {{ score.percentage }}%</div>
+              <br />
+              <!--  <div class=" profile_box_B_Box_line_button">
+                  <input type="submit" value="Edit" />
+                </div>  -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+  </body>
+</html>

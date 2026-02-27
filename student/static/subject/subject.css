@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.subject {
+
+    height:  var(--page_height);
+
+}
+
+.subject_logo {
+   
+    font-size: var(--navbar_h);
+    border-bottom: 3px solid black;
+    height: calc((var(--navbar_h)) + 30px);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subject_select {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc((var(--page_height)) + (var(--navbar_h)) - 30px );
+    width: 100%;
+}
+
+.subject_box {
+
+    height: 20vh;
+    width: 20vh;
+    margin: 40PX;
+    border-radius: 25px;
+    box-shadow:  var(--box_shadow);
+    background-color: var(--bg_color);
+    overflow: hidden;
+}
+
+.subject_box input[type=submit] {
+    border: 0px solid;
+    font-size: 30px;
+    height: 100%;
+    background-color: white;
+    width: 100%;
+    color: black;
+}
+
+.subject_box input[type=submit]:hover {
+    border: 0px solid;
+    background-color: white;
+    font-weight: var(--font_weight_hover);
+    color: black;
+}
+
+@media screen and (max-width: 800px) {  
+    .subject_logo {
+        font-size: 30px;
+        border-bottom: 3.5px solid black;
+        height: calc((var(--navbar_h)) + 10px);
+    }
+    .subject_select {
+        display: block;
+       
+        height: calc((var(--page_height)) + (var(--navbar_h)) - 30px );
+        width: 100%;
+    }
+    .subject_box {
+        height: 20vh;
+        width: 60vw;
+        margin: 40px auto;
+   
+    }
+}

@@ -1,0 +1,284 @@
+{% if not request.user.is_authenticated  %}
+<div id="footer_laptop">
+    <div id="footer_u1" class="footer">
+        <div class="footer_box">
+            <div class="footer_line">
+                <a href="{% url 'aboutus' %}">
+                    <input type="submit" value="About Us">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'feedback' %}">
+                    <input type="submit" value="Feedback">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'profile' %}">
+                    <input type="submit" value="Profile">
+                </a>
+
+            </div>
+
+
+        </div>
+
+        <div class="footer_box">
+            <div class="footer_line">
+                <a href="{% url 'signin' %}">
+                    <input type="submit" value="Sign In">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'signup' %}">
+                    <input type="submit" value="Sign Up">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'forget_1' %}">
+                    <input type="submit" value="Forget password">
+                </a>
+            </div>
+
+        </div>
+        <div class="footer_box">
+            <div class="footer_line">
+                <a href="{% url 'p_home' %}">
+                    <input type="submit" value="Parents">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'i_home' %}">
+                    <input type="submit" value="Institute">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="">
+                    <input type="submit" value="T&C">
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+<div id="footer_mobile">
+    <div class="footer">
+        <div class="footer_box">
+            <div class="footer_line">
+                <a href="{% url 'aboutus' %}">
+                    <input type="submit" value="About Us">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'feedback' %}">
+                    <input type="submit" value="Feedback">
+                </a>
+            </div>
+
+        <div class="footer_line">
+            <a href="{% url 'p_home' %}">
+                <input type="submit" value="Parents">
+            </a>
+        </div>
+        <div class="footer_line">
+            <a href="{% url 'i_home' %}">
+                <input type="submit" value="Institute">
+            </a>
+        </div>
+
+    </div>
+    <div class="footer_box">
+        <div class="footer_line">
+            <a href="{% url 'signin' %}">
+                <input type="submit" value="Sign In">
+            </a>
+        </div>
+        <div class="footer_line">
+            <a href="{% url 'signup' %}">
+                <input type="submit" value="Sign Up">
+            </a>
+        </div>
+        <div class="footer_line">
+            <a href="{% url 'forget_1' %}">
+                <input type="submit" value="Forget password">
+            </a>
+        </div>
+
+
+        <div class="footer_line">
+            <a href="">
+                <input type="submit" value="T&C">
+            </a>
+        </div>
+    </div>
+
+</div>
+<script>function myFunction3(A) {
+        if (A.matches) {
+            var element = document.getElementById('footer_laptop');
+            var comment = document.createComment('This is a commented out HTML code');
+            element.parentNode.replaceChild(comment, element);
+
+        } else {
+            var element = document.getElementById('footer_mobile');
+            var comment = document.createComment('This is a commented out HTML code');
+            element.parentNode.replaceChild(comment, element);
+        }
+    }
+
+
+    var A = window.matchMedia("(max-width: 600px)")
+
+    myFunction3(A);
+
+    A.addEventListener("change", function () {
+        myFunction3(A);
+        location.reload();
+    });
+</script>
+
+{% else %}
+
+ <div id="footer_laptop">
+    <div id="footer_u1" class="footer">
+        <div class="footer_box">
+            <div class="footer_line">
+                <a href="{% url 'aboutus' %}">
+                    <input type="submit" value="About Us">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'feedback' %}">
+                    <input type="submit" value="Feedback">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'profile' %}">
+                    <input type="submit" value="Profile">
+                </a>
+            </div>
+        </div>
+        <div class="footer_box">
+            <div class="footer_line">
+                <a href="{% url 'result' %}">
+                    <input type="submit" value="Result">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'score' %}">
+                    <input type="submit" value="Score">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'exam' %}">
+                    <input type="submit" value="Exam">
+                </a>
+            </div>
+        </div>
+        <div class="footer_box">
+            <div class="footer_line">
+                <a href="{% url 'p_home' %}">
+                    <input type="submit" value="Parents">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'i_home' %}">
+                    <input type="submit" value="Institute">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="">
+                    <input type="submit" value="T&C">
+                </a>
+            </div>            
+        </div>
+    </div>
+
+<div id="footer_mobile">
+    <div class="footer">
+        <div class="footer_box">
+            <div class="footer_line">
+                <a href="{% url 'aboutus' %}">
+                    <input type="submit" value="About Us">
+                </a>
+            </div>
+            <div class="footer_line">
+                <a href="{% url 'feedback' %}">
+                    <input type="submit" value="Feedback">
+                </a>
+            </div>
+    
+        <div class="footer_line">
+            <a href="{% url 'p_home' %}">
+                <input type="submit" value="Parents">
+            </a>
+        </div>
+        <div class="footer_line">
+            <a href="{% url 'i_home' %}">
+                <input type="submit" value="Institute">
+            </a>
+        </div>
+        <div class="footer_line">
+            <a href="{% url 'signout' %}">
+                <input type="submit" value="Sign Out">
+            </a>
+        </div>
+    </div>
+    <div class="footer_box">
+        <div class="footer_line">
+            <a href="{% url 'result' %}">
+                <input type="submit" value="Result">
+            </a>
+        </div>
+        <div class="footer_line">
+            <a href="{% url 'score' %}">
+                <input type="submit" value="Score">
+            </a>
+        </div>
+        <div class="footer_line">
+            <a href="{% url 'exam' %}">
+                <input type="submit" value="Exam">
+            </a>
+        </div>
+
+        <div class="footer_line">
+            <a href="{% url 'forget_1' %}">
+                <input type="submit" value="Forget password">
+            </a>
+        </div>
+        <div class="footer_line">
+            <a href="">
+                <input type="submit" value="T&C">
+            </a>
+        </div>
+    </div>
+</div>
+
+</div>
+<script>function myFunction3(A) {
+        if (A.matches) {
+            var element = document.getElementById('footer_laptop');
+            var comment = document.createComment('This is a commented out HTML code');
+            element.parentNode.replaceChild(comment, element);
+
+        } else {
+            var element = document.getElementById('footer_mobile');
+            var comment = document.createComment('This is a commented out HTML code');
+            element.parentNode.replaceChild(comment, element);
+        }
+    }
+
+
+    var A = window.matchMedia("(max-width: 600px)")
+
+    myFunction3(A);
+
+    A.addEventListener("change", function () {
+        myFunction3(A);
+        location.reload();
+    });</script>   
+
+    {% endif %}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% include "data.html" %}
+   
+    <link rel="stylesheet" href="{% static 'test/test.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+</head>
+
+<body>
+    
+    {% include "header.html" %}
+    {{h}}
+    <div id="test_u1" class="test">
+        <div class="test_box">
+            <form action="" method="post">
+                {% csrf_token %}
+                
+                <div class="test_qustion">
+                    <div class="test_qustion_no">{{test}} : </div>
+                    <div class="test_qustion_text">{{qustion.qustion}}</div>
+                </div>
+                <div class="test_option">
+                    <div class="test_option_line">
+                        <input type="radio" name="option" value="{{qustion.option_1}}" id=""><label for="radio">{{qustion.option_1}}</label>
+                    </div>
+                    <div class="test_option_line">
+                        <input type="radio" name="option" value="{{qustion.option_2}}" id=""><label for="radio">{{qustion.option_2}}</label>
+                    </div>
+                    <div class="test_option_line">
+                        <input type="radio" name="option" value="{{qustion.option_3}}" id=""><label for="radio">{{qustion.option_3}}</label>
+                    </div>
+                    <div class="test_option_line">
+                        <input type="radio" name="option" value="{{qustion.option_4}}" id=""><label for="radio">{{qustion.option_4}}</label>
+                    </div>
+                </div>
+          
+                <div class="test_button">
+                    <input class="button" type="submit" name="submit" value="submit">
+                    <input class="button" type="submit" name="submit" value="skip">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="test_u2" class="message">
+        <div class="message_box">
+            <div class="message_animation">
+                <div class="phone">
+                </div>
+            </div>
+            <div class="message_line">Please rotate your device!</div>
+        </div>
+    </div>
+
+    <script>function myFunction(x) {
+            if (x.matches) {
+                var element = document.getElementById('test_u1');
+                var comment = document.createComment('This is a commented out HTML code');
+                element.parentNode.replaceChild(comment, element);
+
+            } else {
+                var element = document.getElementById('test_u2');
+                var comment = document.createComment('This is a commented out HTML code');
+                element.parentNode.replaceChild(comment, element);
+            }
+        }
+
+
+        var x = window.matchMedia("(max-width: 800px) and (orientation :portrait )")
+
+        myFunction(x);
+
+        x.addEventListener("change", function () {
+            myFunction(x);
+            location.reload();
+        });
+    </script>
+    {% include "footer.html" %}
+</body>
+
+</html>

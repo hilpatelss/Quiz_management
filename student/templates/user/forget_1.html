@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include "data.html" %}
+  <link rel="stylesheet" href="{% static 'user/forget_1.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+</head>
+
+<body> 
+  {% include "header.html" %} 
+    <div class="forget_1_main">
+      <div class="forget_1_box">
+        <div class="forget_1_box_L">
+          <div class="forget_1_box_L_logo"></div>
+        </div>
+        <div class="forget_1_box_R">
+          <div class="forget_1_box_R_logo">Forget Password</div>
+          <div class="forget_1_box_R_form">
+            <div class="forget_1_box_R_form_box">
+              <form action="" method="post">
+                {% csrf_token %}
+                <div class="forget_1_box_R_form_box_line">
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="username"
+                  />
+                </div>
+                <div class="forget_1_box_R_form_box_line">
+                  <input type="submit" value="submit" />
+                </div>                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include "footer.html" %}
+  </body>
+</html>

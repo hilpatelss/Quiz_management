@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'admin/feedback.css' %}" />
+</head>
+
+<body>
+    {% include "header.html" %}
+    <div class="feedback">
+        <div class="feedback_box">
+            <div class="feedback_logo">
+                feedback
+            </div>
+            <div class="feedback_form">
+                <div class="feedback_part">
+                    <form action="" method="post" name="feedback">
+                        {% csrf_token %}
+                        <div class=" feedback_Box_line">
+                            <input type="text" name="Name" id="" placeholder="Name">
+                        </div>
+                        <div class=" feedback_Box_line">
+
+                            <input type="text" name="Email" id="" placeholder="Email">
+                        </div>
+                        <div class=" feedback_Box_line_f">
+
+                            <textarea name="feedback" rows="5" cols="50" placeholder="feedback"></textarea>
+                        </div>
+                        <div class="feedback_Box_line_s">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "footer.html" %}
+
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include "data.html" %}
+  <link rel="stylesheet" href="{% static 'user/signin.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+</head>
+
+<body>
+  {% if messages %}
+  <script>
+  alert("{{mesage}}");
+</script>
+  {% endif %}
+ 
+  {% include "header.html" %}
+ 
+    <div class="signin_main">
+      <div class="signin_box">
+        <div class="signin_box_L">
+          <div class="signin_box_L_logo"></div>
+        </div>
+        <div class="signin_box_R">
+          <div class="signin_box_R_logo">Sign In</div>
+          <div class="signin_box_R_form">
+            <div class="signin_box_R_form_box">
+              <form action="" method="post">
+                {% csrf_token %}
+                <div class="signin_box_R_form_box_line">
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="username"
+                    id=""
+                  />
+                </div>
+                <div class="signin_box_R_form_box_line">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    id=""
+                  />
+                </div>
+                <br>
+                <div class="signin_box_R_form_box_line">
+                  <a href="{% url 'forget_1' %}">forget password</a>
+                </div>
+                <div class="signin_box_R_form_box_line">
+                  <input type="submit" value="Sign In" />
+                </div>
+                <div class="signin_box_R_form_box_line">
+                  <a href="{% url 'signup' %}">do you wanna register</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {% include "footer.html" %}
+  </body>
+</html>

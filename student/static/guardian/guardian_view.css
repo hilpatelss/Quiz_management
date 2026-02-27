@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0;
+    font-family: DM Serif Text, serif;
+    box-sizing: border-box;
+
+}
+
+.guardian_view_main {
+
+    height: var(--page_height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guardian_view_box {
+    height: 530px;
+    width: 370px;
+    display: block;
+
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: var(--box_shadow);
+    background-color: var(--bg_color);
+}
+
+.guardian_view_box_T {
+    background: var(--logo);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45%;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2.5px solid black;
+    align-items: center;
+}
+
+
+
+.guardian_view_box_B {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.guardian_view_box_B_Box {
+    height: 80%;
+    width: 70%;
+    display: block;
+
+}
+
+.guardian_view_box_B_Box_line {
+    height: 45px;
+    width: 100%;
+    border-bottom: 2.5px solid black;
+    display: flex;
+    align-items: last baseline;
+}
+
+.guardian_view_box_B_Box_line_button {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+
+}
+
+.guardian_view_box_B_Box_line_button input[type=submit] {
+    padding: 5px 20px;
+    width: 60%;
+    border: 3.5px solid rgba(0, 0, 0, 0.568);
+    font-size: larger;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.568);
+    border-radius: 50px;
+    background-color: white;
+}
+
+.guardian_view_box_B_Box_line_button input[type=submit]:active,
+input[type=submit]:hover,
+input[type=submit]:focus {
+    background-color: white;
+    border: 3.5px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+
+}
+
+@media screen and (max-width: 800px) { 
+    .guardian_view_box {
+        height: 520px;
+        width: 320px;
+    }
+}

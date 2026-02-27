@@ -1,0 +1,153 @@
+* {
+    margin: 0%;
+    padding: 0;
+    font-family: DM Serif Text, serif;
+    box-sizing: border-box;
+
+}
+
+.feedback {
+    border: 1px solid black;
+    height:  var(--page_height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback_box {
+    height: 550px;
+    width: 430px;
+    display: block;
+    border: none;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow:  var(--box_shadow);
+    background-color: var(--bg_color);
+}
+
+.feedback_logo {
+    
+    font-size: 50px;
+    
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2.5px solid black;
+    align-items: center;
+}
+
+
+.feedback_form {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.feedback_part {
+    height: 80%;
+    width: 75%;
+    display: block;
+    
+}
+
+.feedback_Box_line {
+    height: 45px;
+    width: 100%;
+    
+    display: flex;
+    align-items: last baseline;
+}
+.feedback_Box_line_s{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.feedback_Box_line_s input[type=submit] {
+    padding: 5px 20px;
+    width: 60%;
+    border: var(--box_border);
+    font-size: larger;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.568);
+    border-radius: 50px;
+    background-color: white;
+}
+
+.feedback_Box_line_s input[type=submit]:active,
+input[type=submit]:hover,
+input[type=submit]:focus
+{
+    background-color: white;
+    border:  var(--box_border_hover);
+    color: rgb(0, 0, 0);
+
+}
+.feedback_Box_line_f{
+    padding: 20px 0px;
+    width: 95%;
+    height: max-content;
+
+}
+.feedback_Box_line_f textarea{
+    width: 100%;
+    border:  var(--box_border);
+    color: rgba(0, 0, 0, 0.568);
+    padding: 2px;
+
+    font-size: larger;
+    font-size: medium;
+    
+}
+.feedback_Box_line_f textarea::after, textarea:hover, textarea:focus {
+    border:  var(--box_border_hover);
+    outline: none;
+    color: black;
+}
+.feedback_Box_line input[type=text],
+input[type=email]{
+    width: 95%;
+    border-radius: 0;
+    border: 1px solid transparent;
+    border-bottom:  var(--box_border);
+    padding: 2px;
+    font-size: medium;
+    color: rgba(0, 0, 0, 0.568);
+}
+
+.feedback_Box_line input[type=text]::placeholder,
+input[type=email]::placeholder {
+    color: black;
+
+}
+
+.feedback_Box_line input[type=text]::after,
+input[type=text]:active,
+input[type=text]:hover,
+input[type=text]:focus,
+input[type=email]::after,
+input[type=email]:active,
+input[type=email]:hover,
+input[type=email]:focus{
+    border: 1px solid transparent;
+    border-bottom:  var(--box_border_hover);
+    outline: none;
+}
+
+@media screen and (max-width: 500px) {
+
+    .feedback_box{
+        width: 300px;
+        height: 450px;
+    }
+    .feedback_logo{
+        height: 20%;
+    }
+}

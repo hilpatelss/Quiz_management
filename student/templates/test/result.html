@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include "data.html" %}
+  <link rel="stylesheet" href="{% static 'test/result.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+</head>
+
+<body>
+ 
+  {% include "header.html" %}
+  <div class="result_logo"> Your Result</div>
+  <div id="result_u1" class="result">
+    <div class="result_box">
+      <div class="result_box_line">
+        <div class="result_box_line_qno">Q. No</div>
+        <div class="result_box_line_qustion">Qustion</div>
+        <div class="result_box_line_answer">your answer</div>
+        <div class="result_box_line_right_answer">right answer</div>
+      </div>
+      {% for result in result %}
+      <div class="result_box_line">
+        <div class="result_box_line_qno">{{forloop.counter }}</div>
+        <div class="result_box_line_qustion">{{result.qustion}}</div>
+        <div class="result_box_line_answer">{{result.student_option}}</div>
+        <div class="result_box_line_right_answer">{{result.answer}}</div>
+      </div>
+      {% endfor %}
+      <div class="result_box_score">
+        <div class="result_box_score_box">score: {{right}}/{{total}}</div>
+        <div class="result_box_score_box">right answer: {{right}}</div>
+        <div class="result_box_score_box">wrong answer: {{wrong}}</div>
+        <div class="result_box_score_box">percentage: {{percentage}}%</div>
+      </div>
+    </div>
+  </div>
+  <div id="result_u2" class="message">
+    <div class="message_box">
+      <div class="message_animation">
+        <div class="phone">
+        </div>
+      </div>
+      <div class="message_line">Please rotate your device!</div>
+    </div>
+  </div>
+
+  <script>function myFunction(x) {
+      if (x.matches) {
+        var element = document.getElementById('result_u1');
+        var comment = document.createComment('This is a commented out HTML code');
+        element.parentNode.replaceChild(comment, element);
+
+      } else {
+        var element = document.getElementById('result_u2');
+        var comment = document.createComment('This is a commented out HTML code');
+        element.parentNode.replaceChild(comment, element);
+      }
+    }
+
+
+    var x = window.matchMedia("(max-width: 800px) and (orientation :portrait )")
+
+    myFunction(x);
+
+    x.addEventListener("change", function () {
+      myFunction(x);
+      location.reload();
+    });
+  </script>
+  {% include "footer.html" %}
+</body>
+
+</html>

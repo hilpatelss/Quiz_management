@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: DM Serif Text, serif;
+}
+
+.score {
+  height: calc((var(--page_height)) + ((var(--navbar_h))*2));
+  width: 100%;
+  display: flex;
+  padding-top: var(--navbar_h);
+  padding-bottom: var(--navbar_h);
+  justify-content: center;
+}
+
+.score_logo {
+
+  font-size: var(--navbar_h);
+  border-bottom: 3px solid black;
+  height: calc((var(--navbar_h)) + 30px);
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.score_box {
+  padding: 2vh;
+  height: max-content;
+  display: block;
+  width: 60%;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow:  var(--box_shadow);
+  background-color: var(--bg_color);
+
+}
+
+.score_box_line {
+  height: max-content;
+
+  width: 100%;
+  border: 2px solid black;
+  font-size: larger;
+  display: flex;
+}
+
+.score_box_line_rank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  padding: 1vh 0;
+ 
+}
+
+.score_box_line_name {
+  display: flex;
+  align-items: center;
+  width: 65%;
+  padding: 1vh 5px;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.score_box_line_score {
+  display: flex;
+  align-items: center;
+  width: 15%;
+  padding: 1vh 5px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.score_box_line_pertange {
+  display: flex;
+  align-items: center;
+  width: 15%;
+  padding: 1vh 5px;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+@media screen and (max-width: 1200px) {  
+  .score_box{
+     
+    width: 95%;
+  
+  }
+}
+@media screen and (max-width: 800px) and (orientation : landscape) {  
+  .score_box{
+      width: 95%;
+  }
+  .score {
+    height:  calc(max-content + (( var(--navbar_h))*2));
+  }
+  .score_box {
+    padding: 5vh;
+  
+  }
+  .score_box_line {
+    font-size: xx-small;
+  }
+}
+@media screen and (max-width: 800px) and (orientation : portrait) {  
+  .message{
+      height: var(--page_height);
+      width: 100%;
+      background: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .message_box{
+      height:10vh ;
+      width: 50%;
+      
+
+  }
+  .message_animation{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+  }
+  .message_line{
+      color: black;
+      font-size: 1em;
+      margin-top: 40px;
+      text-align: center;
+     
+  }
+  .phone {
+      height: 50px;
+      width: 100px;
+      border: 3px solid black;
+      border-radius: 10px;
+      animation: rotate 2.5s ease-in-out infinite alternate;
+  }
+  
+    
+  @keyframes rotate {
+      0% {
+            transform: rotate(0deg)
+        }
+        50% {
+            transform: rotate(-90deg)
+        }
+        100% {
+            transform: rotate(-90deg)
+        }
+    }
+  
+  }

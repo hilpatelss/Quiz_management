@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'admin/aboutus.css' %}" />
+
+</head>
+
+<body>
+
+    {% include "header.html" %}
+    <div class="aboutus">
+        <div class="aboutus_box">
+            <div class="aboutus_box_logo_part">
+                <div class="aboutus_box_logo">
+                    <div class="admin_1"></div>
+                </div>
+            </div>
+            <div class="aboutus_box_detail">
+                <div class="aboutus_box_detail_part">
+                    <div class="aboutus_box_detail_line">Name :
+                        Makadiya Anandi S.</div>
+                    <div class="aboutus_box_detail_line">Date of Birth : 21/07/2003 </div>
+                    <div class="aboutus_box_detail_line">Ocuption : 6th sem in BE </div>
+                    <div class="aboutus_box_detail_line">Contact no : 1234567890</div>
+                    <div class="aboutus_box_detail_line">Email :</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aboutus_box">
+            <div class="aboutus_box_logo_part">
+                <div class="aboutus_box_logo">
+                    <div class="admin_2"></div>
+                </div>
+            </div>
+            <div class="aboutus_box_detail">
+                <div class="aboutus_box_detail_part">
+                    <div class="aboutus_box_detail_line">Name : Makadiya Disha A. </div>
+                    <div class="aboutus_box_detail_line">Date of Birth : 20/10/2002 </div>
+                    <div class="aboutus_box_detail_line">Ocuption : 6th sem in BE </div>
+                    <div class="aboutus_box_detail_line">Contact no :12345678990</div>
+                    <div class="aboutus_box_detail_line">Email :</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aboutus_box">
+            <div class="aboutus_box_logo_part">
+                <div class="aboutus_box_logo">
+                    <div class="admin_3"></div>
+                </div>
+            </div>
+            <div class="aboutus_box_detail">
+                <div class="aboutus_box_detail_part">
+                    <div class="aboutus_box_detail_line">Name : Patel Hil S. </div>
+                    <div class="aboutus_box_detail_line">Date of Birth : 15/02/2003 </div>
+                    <div class="aboutus_box_detail_line">Ocuption : 6th sem in BE</div>
+                    <div class="aboutus_box_detail_line">Contact no : 1234567890</div>
+                    <div class="aboutus_box_detail_line">Email :</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include "footer.html" %}
+</body>
+
+</html>

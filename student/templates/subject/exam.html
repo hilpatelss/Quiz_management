@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% include "data.html" %}
+    <link rel="stylesheet" href="{% static 'subject/exam.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+</head>
+
+<body>
+    {% include "header.html" %}
+    <div class="exam">
+        <div class="exam_logo">Select your cource</div>
+        <form action="" method="post">
+            <div class="exam_select">
+                {% csrf_token %}
+                {% for exam in exam  %}
+                <div class="exam_box">
+                    
+                    <input type="submit" name="exam_name" value="{{exam.exam_name}}">
+                </div>
+                {% endfor %}
+                
+            </div>
+        </form>
+    </div>
+    {% include "footer.html" %}
+</html>

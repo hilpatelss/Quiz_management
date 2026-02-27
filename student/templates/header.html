@@ -1,0 +1,183 @@
+{% if  request.user.is_authenticated  %}
+ <div class="navbar">
+    <div class="navbar_part">
+        <div class="navbar_l">
+            <div class="menu">
+                <div class="menu_logo"></div>
+                <div class="menu_box">
+                    <div class="menu_box_item">
+                        <a href="{% url 'p_home' %}">
+                            <input type="submit" value="Parent" />
+                        </a>
+                    </div>
+                    <div class="menu_box_item">
+                        <a href="{% url 'i_home' %}">
+                            <input type="submit" value="Institute" />
+                        </a>
+                    </div>
+                    <div class="menu_box_item">
+                        <a href="{% url 'aboutus' %}">
+                            <input type="submit" value="aboutus" />
+                        </a>
+                    </div>
+                    <div class="menu_box_item">
+                        <a href="{% url 'feedback' %}">
+                            <input type="submit" value="feedback" />
+                        </a>
+                    </div>
+                    <div class="menu_box_item">
+                        <a href="{% url 'exam' %}">
+                            <input type="submit" value="T&C" />
+                        </a>
+                    </div>
+                     <div class="menu_box_item">
+                        <a href="{% url 'guardian_view' %}">
+                            <input type="submit" value="gardian" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar_part">
+        <div class="navbar_c">
+            <a href="{% url 'home' %}">
+
+                <div class="logo">
+
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="navbar_part">
+        <div class="navbar_r">
+            <div class="user">
+                <div class="user_logo"></div>
+                <div class="user_box">
+                    <div class="user_box_item">
+                       
+                        <a href="{% url 'profile' %}">
+                            <input type="submit" value="profile" />
+                        </a>
+                    </div>
+                    <div class="user_box_item">
+                        <a href="{% url 'exam' %}">
+                            <input type="submit" value="Exam" />
+                        </a>
+                    </div>
+                    <div class="user_box_item">
+                        <a href="{% url 'score' %}">
+                            <input type="submit" value="score" />
+                        </a>
+                    </div>
+                    {% comment %} <div class="user_box_item">
+                        <a href="{% url 'exam' %}">
+                            <input type="submit" value="gardian" />
+                        </a>
+                    </div> {% endcomment %}
+                    <div class="user_box_item">
+                        <a href="{% url 'signout' %}">
+                            <input type="submit" value="Sign Out" />
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+{% else %}
+<div class="navbar">
+    <div class="navbar_part">
+        <div class="navbar_l">
+            <div class="menu">
+                <div class="menu_logo"></div>
+                <div class="menu_box">
+                    <div class="menu_box_item">
+                        <a href="{% url 'profile' %}">
+                            <input type="submit" value="profile" />
+                        </a>
+                    </div>
+                    <div class="menu_box_item">
+                        <a href="{% url 'aboutus' %}">
+                            <input type="submit" value="aboutus" />
+                        </a>
+                    </div>
+                    <div class="menu_box_item">
+                        <a href="{% url 'feedback' %}">
+                            <input type="submit" value="feedback" />
+                        </a>
+                    </div>
+                    <div class="menu_box_item">
+                        <a href="{% url 'exam' %}">
+                            <input type="submit" value="T&C" />
+                        </a>
+                    </div>              
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar_part">
+        <div class="navbar_c">
+            <a href="{% url 'home' %}">
+                <div class="logo">
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="navbar_part">
+        <div class="navbar_r">
+            <div id="navbar_u1" class="user_2">
+                <div class="user_box_2">
+                    <a href="{% url 'signup' %}">
+                        <input type="submit" value="Sign Up">
+                    </a>
+                </div>
+                <div class="user_box_2">
+                    <a href="{% url 'signin' %}">
+                        <input type="submit" value="Sign In">
+                    </a>
+                </div>
+            </div>
+            <div id="navbar_u2" class="user">
+                <div class="user_logo"></div>
+                <div class="user_box">
+                    <div class="user_box_item">
+                        <a href="{% url 'signup' %}">
+                            <input type="submit" value="Sign Up" />
+                        </a>
+                    </div>
+                    <div class="menu_box_item">
+                        <a href="{% url 'signin' %}">
+                            <input type="submit" value="Sign In" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script>function myFunction(x) {
+                    if (x.matches) {
+                        var element = document.getElementById('navbar_u1');
+                        var comment = document.createComment('This is a commented out HTML code');
+                        element.parentNode.replaceChild(comment, element);
+
+                    } else {
+                        var element = document.getElementById('navbar_u2');
+                        var comment = document.createComment('This is a commented out HTML code');
+                        element.parentNode.replaceChild(comment, element);
+                    }
+                }
+
+
+                var x = window.matchMedia("(max-width: 650px)")
+
+                myFunction(x);
+
+                x.addEventListener("change", function () {
+                    myFunction(x);
+                    location.reload();
+                });
+            </script>
+        </div>
+    </div>
+</div>
+{% endif %}

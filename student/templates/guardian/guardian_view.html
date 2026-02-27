@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include "data.html" %}
+  <link rel="stylesheet" href="{% static 'guardian/guardian_view.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/main.css' %}" />
+</head>
+
+<body> 
+  {% include "header.html" %}
+    <div class=" guardian_view_main">
+      <div class=" guardian_view_box">
+        <div class=" guardian_view_box_T">
+          <div class=" guardian_view_box_T_logo"></div>
+        </div>
+           <div class=" guardian_view_box_B">
+          
+            <div class=" guardian_view_box_B_Box">
+              <form action="" method="post">
+                {% csrf_token %}
+                <div class=" guardian_view_box_B_Box_line">
+                Institue code 1 : {{gardian.g_1}}                 
+                </div>
+                <div class=" guardian_view_box_B_Box_line">
+                Institue code 2 : {{gardian.g_2}} 
+                </div>
+                <div class=" guardian_view_box_B_Box_line">
+                Institue code 3 :{{gardian.g_3}} 
+                </div>
+                <div class=" guardian_view_box_B_Box_line">
+                parents code 1 : {{gardian.g_4}} 
+                </div>
+                <div class=" guardian_view_box_B_Box_line">
+                parents code 2 : {{gardian.g_5}} 
+                </div>
+                <br>
+                <a href="">
+                <div class=" guardian_view_box_B_Box_line_button">
+                        <input type="submit" value="Edit" />
+                    </div>
+                </a>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+    {% include "footer.html" %}
+  </body>
+</html>
